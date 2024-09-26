@@ -12,7 +12,7 @@ const razorpay = new Razorpay({
 
 app.listen(8080)
 
-app.get('/order',async (req,res)=>{
+app.get('/',async (req,res)=>{
    const data = await razorpay.orders.create({
         "amount": (500*100),
         "currency": "INR",
